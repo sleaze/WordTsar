@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>gui/images/icon64x64.png</file>
+        <file>gui/images/busy.gif</file>
+        <file>gui/images/splash.png</file>
+    </qresource>
+</RCC>

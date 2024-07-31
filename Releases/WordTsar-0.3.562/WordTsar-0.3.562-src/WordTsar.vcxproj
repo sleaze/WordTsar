@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0411B372-8DB1-4B85-9815-23C52779A953}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>5.15.1_32</QtInstall>
+    <QtModules>core;gui;widgets;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="QtSettings">
+    <QtInstall>5.15.1_32</QtInstall>
+    <QtModules>core;gui;widgets;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>5.15.1_32</QtInstall>
+    <QtModules>core;gui;widgets;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
+    <QtInstall>5.15.1_32</QtInstall>
+    <QtModules>core;gui;widgets;printsupport</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>.;C:\src\wordtsar\src\third-party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>UTF8PROC_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>Q_COMPILER_CONSTEXPR</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>.;C:\src\wordtsar\src\third-party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>UTF8PROC_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>Q_COMPILER_CONSTEXPR</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>.;C:\src\wordtsar\src\third-party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalOptions>/bigobj /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>UTF8PROC_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>Q_COMPILER_CONSTEXPR</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>.;C:\src\wordtsar\src\third-party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalOptions>/bigobj /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>UTF8PROC_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>Q_COMPILER_CONSTEXPR</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\codepage\cp437.cpp" />
+    <ClCompile Include="src\core\document\document.cpp" />
+    <ClCompile Include="src\core\document\math.cpp" />
+    <ClCompile Include="src\core\utils\utils.cpp" />
+    <ClCompile Include="src\files\docxfile.cpp" />
+    <ClCompile Include="src\files\file.cpp" />
+    <ClCompile Include="src\files\rtffile.cpp" />
+    <ClCompile Include="src\files\rtf\read\rtfcontrolsymbol.cpp" />
+    <ClCompile Include="src\files\rtf\read\rtfcontrolword.cpp" />
+    <ClCompile Include="src\files\rtf\read\rtfelement.cpp" />
+    <ClCompile Include="src\files\rtf\read\rtfgroup.cpp" />
+    <ClCompile Include="src\files\rtf\read\rtfparser.cpp" />
+    <ClCompile Include="src\files\rtf\read\rtfstate.cpp" />
+    <ClCompile Include="src\files\rtf\read\rtftext.cpp" />
+    <ClCompile Include="src\files\rtf\write\rtfwriter.cpp" />
+    <ClCompile Include="src\files\textfile.cpp" />
+    <ClCompile Include="src\files\wordstarfile.cpp" />
+    <ClCompile Include="src\gui\dialogs\qcolorpickerbutton.cpp" />
+    <ClCompile Include="src\gui\editor\editorctrl.cpp" />
+    <ClCompile Include="src\gui\layout\layout.cpp" />
+    <ClCompile Include="src\gui\print\printout.cpp" />
+    <ClCompile Include="src\gui\ruler\rulerctrl.cpp" />
+    <ClCompile Include="src\gui\spellcheck\centerword.cpp" />
+    <ClCompile Include="src\gui\spellcheck\cspellcheck.cpp" />
+    <ClCompile Include="src\gui\spellcheck\cspellcheckword.cpp" />
+    <ClCompile Include="src\input\wordtsarinput.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\test\test.cpp" />
+    <ClCompile Include="src\third-party\utf8proc-2.5.0\utf8proc.c" />
+    <ClCompile Include="src\third-party\zip\zip.c" />
+    <ClCompile Include="src\wordtsar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\wordtsar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\codepage\cp437.h" />
+    <ClInclude Include="src\core\document\doctstructs.h" />
+    <ClInclude Include="src\core\document\document.h" />
+    <ClInclude Include="src\core\document\math.h" />
+    <ClInclude Include="src\core\include\config.h" />
+    <ClInclude Include="src\core\include\utils.h" />
+    <ClInclude Include="src\core\include\version.h" />
+    <ClInclude Include="src\files\docxfile.h" />
+    <ClInclude Include="src\files\file.h" />
+    <ClInclude Include="src\files\rtffile.h" />
+    <ClInclude Include="src\files\rtf\read\rtfcontrolsymbol.h" />
+    <ClInclude Include="src\files\rtf\read\rtfcontrolword.h" />
+    <ClInclude Include="src\files\rtf\read\rtfelement.h" />
+    <ClInclude Include="src\files\rtf\read\rtfgroup.h" />
+    <ClInclude Include="src\files\rtf\read\rtfparser.h" />
+    <ClInclude Include="src\files\rtf\read\rtfstate.h" />
+    <ClInclude Include="src\files\rtf\read\rtftext.h" />
+    <ClInclude Include="src\files\rtf\structs.h" />
+    <ClInclude Include="src\files\rtf\write\rtfwriter.h" />
+    <ClInclude Include="src\files\textfile.h" />
+    <ClInclude Include="src\files\wordstarfile.h" />
+    <ClInclude Include="src\test\test.h" />
+    <ClInclude Include="src\third-party\utf8proc-2.5.0\utf8proc.h" />
+    <ClInclude Include="src\third-party\zip\miniz.h" />
+    <ClInclude Include="src\third-party\zip\zip.h" />
+    <QtMoc Include="src\gui\dialogs\qcolorpickerbutton.h" />
+    <ClInclude Include="src\gui\layout\layout.h" />
+    <ClInclude Include="src\gui\spellcheck\centerword.h" />
+    <ClInclude Include="src\gui\spellcheck\cspellcheck.h" />
+    <ClInclude Include="src\gui\spellcheck\cspellcheckword.h" />
+    <ClInclude Include="src\input\wordtsarinput.h" />
+    <QtMoc Include="src\gui\ruler\rulerctrl.h" />
+    <QtMoc Include="src\gui\print\printout.h" />
+    <QtMoc Include="src\gui\editor\editorctrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="src\gui\dialogs\find.ui" />
+    <QtUic Include="src\gui\dialogs\findreplace.ui" />
+    <QtUic Include="src\gui\dialogs\pagelayout.ui" />
+    <QtUic Include="src\gui\dialogs\preferences.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="src\resources.qrc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

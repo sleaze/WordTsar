@@ -1,0 +1,41 @@
+#ifndef VERSION_H
+#define VERSION_H
+
+
+//Date Version Types
+<<<<<<< working copy
+static const char VDATE[] = "0";
+static const char VMONTH[] = "0";
+=======
+static const char VDATE[] = "07";
+static const char VMONTH[] = "05";
+>>>>>>> merge rev
+static const char VYEAR[] = "2020";
+<<<<<<< working copy
+static const char UBUNTU_VERSION_STYLE[] =  "20.00";
+=======
+static const char UBUNTU_VERSION_STYLE[] =  "20.05";
+>>>>>>> merge rev
+
+//Software Status
+static const char STATUS[] =  "pre-Alpha";
+static const char STATUS_SHORT[] =  "a";
+
+//Standard Version Type
+static const long MAJOR  = 0;
+<<<<<<< working copy
+static const long MINOR  = 3;
+static const long BUILD  = 0;
+=======
+static const long MINOR  = 2;
+static const long BUILD  = 2097;
+>>>>>>> merge rev
+
+<<<<<<< working copy
+static const char FULLVERSION_STRING [] = "0.3 build 0";
+=======
+static const char FULLVERSION_STRING [] = "0.2 build 2097";
+>>>>>>> merge rev
+
+#endif //VERSION_H
+

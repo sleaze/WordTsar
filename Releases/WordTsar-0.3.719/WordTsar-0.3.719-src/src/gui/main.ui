@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>841</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>839</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Open"/>
+    <addaction name="action_Close"/>
+    <addaction name="action_Save"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="actionSave_and_Close"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionPrint_Preview"/>
+    <addaction name="separator"/>
+    <addaction name="actionStatus"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuCopy">
+     <property name="title">
+      <string>Copy</string>
+     </property>
+     <addaction name="actionBlock"/>
+     <addaction name="actionFrom_Clipboard"/>
+     <addaction name="actionTo_Clipboard"/>
+    </widget>
+    <widget class="QMenu" name="menuDelete">
+     <property name="title">
+      <string>Delete</string>
+     </property>
+     <addaction name="actionBlock_2"/>
+     <addaction name="actionWord"/>
+     <addaction name="actionLine"/>
+     <addaction name="actionLine_Left_of_Cursor"/>
+     <addaction name="actionLine_Right_of_Cursor"/>
+     <addaction name="actionTo_Character"/>
+    </widget>
+    <widget class="QMenu" name="menuGo_to_Marker">
+     <property name="title">
+      <string>Go to Marker</string>
+     </property>
+     <addaction name="action1"/>
+     <addaction name="action2"/>
+     <addaction name="action3"/>
+     <addaction name="action4"/>
+     <addaction name="action5"/>
+     <addaction name="action6"/>
+     <addaction name="action7"/>
+     <addaction name="action8"/>
+     <addaction name="action9"/>
+     <addaction name="action0"/>
+    </widget>
+    <widget class="QMenu" name="menuSet_Marker">
+     <property name="title">
+      <string>Set Marker</string>
+     </property>
+     <addaction name="action1_2"/>
+     <addaction name="action2_2"/>
+     <addaction name="action3_2"/>
+     <addaction name="action4_2"/>
+     <addaction name="action5_2"/>
+     <addaction name="action6_2"/>
+     <addaction name="action7_2"/>
+     <addaction name="action8_2"/>
+     <addaction name="action9_2"/>
+     <addaction name="action0_2"/>
+    </widget>
+    <widget class="QMenu" name="menuGo_to_Other">
+     <property name="title">
+      <string>Go to Other</string>
+     </property>
+     <addaction name="actionFont_Tag"/>
+     <addaction name="actionStyle_Tag"/>
+     <addaction name="actionNote_2"/>
+     <addaction name="actionPrevious_Position"/>
+     <addaction name="actionLast_Find_Replace"/>
+     <addaction name="actionBeginning_of_Block"/>
+     <addaction name="actionDocument_Beginning"/>
+     <addaction name="actionDocument_End"/>
+     <addaction name="actionScrol_Continuously_Up"/>
+     <addaction name="actionScroll_Continuously_Down"/>
+    </widget>
+    <widget class="QMenu" name="menuNote_Options">
+     <property name="title">
+      <string>Note Options</string>
+     </property>
+     <addaction name="actionStarting_Number_for_Note"/>
+     <addaction name="actionConvert_Note"/>
+     <addaction name="actionConvert_at_Print"/>
+     <addaction name="actionEndnote_Location"/>
+    </widget>
+    <widget class="QMenu" name="menuEditing_Settings">
+     <property name="title">
+      <string>Editing Settings</string>
+     </property>
+     <addaction name="actionColumn_Block_Mode"/>
+     <addaction name="actionColumn_Replace_Mode"/>
+     <addaction name="actionAuto_Aline"/>
+    </widget>
+    <addaction name="actionMark_Block_Begining"/>
+    <addaction name="actionMark_Block_End"/>
+    <addaction name="actionMove"/>
+    <addaction name="menuCopy"/>
+    <addaction name="menuDelete"/>
+    <addaction name="actionMark_Previous_Block"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind"/>
+    <addaction name="actionFind_and_Replace"/>
+    <addaction name="actionFind_Next"/>
+    <addaction name="actionGo_to_Character"/>
+    <addaction name="actionGo_to_Page"/>
+    <addaction name="menuGo_to_Marker"/>
+    <addaction name="menuGo_to_Other"/>
+    <addaction name="menuSet_Marker"/>
+    <addaction name="separator"/>
+    <addaction name="actionEdit_Note"/>
+    <addaction name="menuNote_Options"/>
+    <addaction name="menuEditing_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionPrint_Preview_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionCommand_Tages"/>
+    <addaction name="actionBlock_Highlighting"/>
+    <addaction name="separator"/>
+    <addaction name="actionScreen_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menu_Insert">
+    <property name="title">
+     <string>&amp;Insert</string>
+    </property>
+    <widget class="QMenu" name="menuOther_Value">
+     <property name="title">
+      <string>Other Value</string>
+     </property>
+     <addaction name="actionCurrent_Time"/>
+     <addaction name="actionLast_Math_Result"/>
+     <addaction name="actionLast_Math_Expression"/>
+     <addaction name="actionLast_Math_as_Dollar"/>
+     <addaction name="actionCurrent_Filename"/>
+     <addaction name="actionCurrent_Drive"/>
+     <addaction name="actionCurrent_Directory"/>
+     <addaction name="actionCurrent_Path"/>
+    </widget>
+    <widget class="QMenu" name="menuVariable">
+     <property name="title">
+      <string>Variable</string>
+     </property>
+     <addaction name="actionDate"/>
+     <addaction name="actionTime"/>
+     <addaction name="actionPage"/>
+     <addaction name="actionLine_2"/>
+     <addaction name="actionFilename"/>
+     <addaction name="actionDrive"/>
+     <addaction name="actionDirectory"/>
+     <addaction name="actionPath"/>
+    </widget>
+    <widget class="QMenu" name="menuNote">
+     <property name="title">
+      <string>Note</string>
+     </property>
+     <addaction name="actionComment"/>
+     <addaction name="actionFootnote"/>
+     <addaction name="actionEndnote"/>
+     <addaction name="actionAnnotation"/>
+    </widget>
+    <widget class="QMenu" name="menuIndex_TOC_Entry">
+     <property name="title">
+      <string>Index/TOC Entry</string>
+     </property>
+     <addaction name="actionTOC_Entry"/>
+     <addaction name="actionIndex_Entry"/>
+     <addaction name="actionMark_Text_for_Index"/>
+     <addaction name="actionDot_Leader_to_Tab"/>
+    </widget>
+    <addaction name="actionPage_Break"/>
+    <addaction name="actionColumn_Break"/>
+    <addaction name="separator"/>
+    <addaction name="actionToday_s_Date"/>
+    <addaction name="menuOther_Value"/>
+    <addaction name="menuVariable"/>
+    <addaction name="actionExtended_Character"/>
+    <addaction name="separator"/>
+    <addaction name="actionFile"/>
+    <addaction name="actionGraphic"/>
+    <addaction name="menuNote"/>
+    <addaction name="separator"/>
+    <addaction name="menuIndex_TOC_Entry"/>
+    <addaction name="actionParagraph_Outline_Number"/>
+   </widget>
+   <widget class="QMenu" name="menuStyle">
+    <property name="title">
+     <string>Style</string>
+    </property>
+    <widget class="QMenu" name="menuOther">
+     <property name="title">
+      <string>Other</string>
+     </property>
+     <addaction name="actionStrikeout"/>
+     <addaction name="actionSubscript"/>
+     <addaction name="actionSuperscript"/>
+     <addaction name="actionDouble_Strike"/>
+     <addaction name="actionColor"/>
+    </widget>
+    <widget class="QMenu" name="menuManage_Paragraph_Styles">
+     <property name="title">
+      <string>Manage Paragraph Styles</string>
+     </property>
+     <addaction name="actionCopy_Style_to_Library"/>
+     <addaction name="actionDelete_Library_Style"/>
+     <addaction name="actionRename_Library_Style"/>
+     <addaction name="actionRename_DOcument_Style"/>
+    </widget>
+    <widget class="QMenu" name="menuConvert_Case">
+     <property name="title">
+      <string>Convert Case</string>
+     </property>
+     <addaction name="actionUppercase"/>
+     <addaction name="actionLowercase"/>
+     <addaction name="actionSentence_Case"/>
+    </widget>
+    <addaction name="actionBold"/>
+    <addaction name="actionItalic"/>
+    <addaction name="actionUnderline"/>
+    <addaction name="actionFont"/>
+    <addaction name="menuOther"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_Paragraph_Style"/>
+    <addaction name="actionReturn_to_Previous_Style"/>
+    <addaction name="actionDefine_Paragraph_Style"/>
+    <addaction name="menuManage_Paragraph_Styles"/>
+    <addaction name="separator"/>
+    <addaction name="menuConvert_Case"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menu_Layout">
+    <property name="title">
+     <string>&amp;Layout</string>
+    </property>
+    <widget class="QMenu" name="menuHeaders_Footers">
+     <property name="title">
+      <string>Headers/Footers</string>
+     </property>
+     <addaction name="actionHeader"/>
+     <addaction name="actionFooter"/>
+    </widget>
+    <widget class="QMenu" name="menuSpecial_Effects">
+     <property name="title">
+      <string>Special Effects</string>
+     </property>
+     <addaction name="actionKeep_Words_Together_on_Line"/>
+     <addaction name="actionKeep_Lines_Together_on_Page"/>
+     <addaction name="actionKeep_Lines_Toghether_in_COlumn"/>
+    </widget>
+    <addaction name="actionCenter_Line"/>
+    <addaction name="actionRight_Align_Line"/>
+    <addaction name="separator"/>
+    <addaction name="actionRuler_Line"/>
+    <addaction name="actionColumns"/>
+    <addaction name="actionPage_2"/>
+    <addaction name="menuHeaders_Footers"/>
+    <addaction name="actionPage_Numbering"/>
+    <addaction name="actionLine_Numbering"/>
+    <addaction name="actionAlignment_and_Spacing"/>
+    <addaction name="menuSpecial_Effects"/>
+   </widget>
+   <widget class="QMenu" name="menuUtilities">
+    <property name="title">
+     <string>Utilities</string>
+    </property>
+    <widget class="QMenu" name="menuSpell_Check_Other">
+     <property name="title">
+      <string>Spell Check Other</string>
+     </property>
+     <addaction name="actionRest_of_Document"/>
+     <addaction name="actionParagraph"/>
+     <addaction name="actionRest_of_Notes"/>
+    </widget>
+    <widget class="QMenu" name="menuMacros">
+     <property name="title">
+      <string>Macros</string>
+     </property>
+     <addaction name="actionPlay"/>
+     <addaction name="actionRecord"/>
+     <addaction name="actionEdit_Create"/>
+     <addaction name="actionSingle_Step"/>
+     <addaction name="actionCopy_2"/>
+     <addaction name="actionDelete_2"/>
+     <addaction name="actionRename"/>
+    </widget>
+    <widget class="QMenu" name="menuSort_Block">
+     <property name="title">
+      <string>Sort Block</string>
+     </property>
+     <addaction name="actionAscending"/>
+     <addaction name="actionDescending"/>
+    </widget>
+    <widget class="QMenu" name="menuMerge_Print_Commands">
+     <property name="title">
+      <string>Merge Print Commands</string>
+     </property>
+     <addaction name="actionData_File"/>
+     <addaction name="actionName_Variables"/>
+     <addaction name="actionSet_Variable"/>
+     <addaction name="actionSet_Variable_to_Math_Result"/>
+     <addaction name="actionAsk_for_Variable"/>
+     <addaction name="separator"/>
+     <addaction name="actionIf"/>
+     <addaction name="actionElse"/>
+     <addaction name="actionEnd_If"/>
+     <addaction name="actionGo_to_Top_of_Document"/>
+     <addaction name="actionGo_to_End_of_Document"/>
+     <addaction name="separator"/>
+     <addaction name="actionDisplay_Message"/>
+     <addaction name="actionPrint_File_n_Times"/>
+    </widget>
+    <widget class="QMenu" name="menuReformat">
+     <property name="title">
+      <string>Reformat</string>
+     </property>
+     <addaction name="actionRest_of_Document_2"/>
+     <addaction name="actionWord_2"/>
+     <addaction name="actionType_Word"/>
+     <addaction name="actionRest_of_Notes_2"/>
+    </widget>
+    <addaction name="actionSpell_Check_Global"/>
+    <addaction name="menuSpell_Check_Other"/>
+    <addaction name="actionThesaurus"/>
+    <addaction name="actionLanguage_Change"/>
+    <addaction name="separator"/>
+    <addaction name="actionInset"/>
+    <addaction name="actionCalculator"/>
+    <addaction name="actionBlock_Math"/>
+    <addaction name="menuSort_Block"/>
+    <addaction name="actionWord_Count"/>
+    <addaction name="separator"/>
+    <addaction name="menuMacros"/>
+    <addaction name="menuMerge_Print_Commands"/>
+    <addaction name="separator"/>
+    <addaction name="menuReformat"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Insert"/>
+   <addaction name="menuStyle"/>
+   <addaction name="menu_Layout"/>
+   <addaction name="menuUtilities"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Open">
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open ^KR</string>
+   </property>
+   <property name="statusTip">
+    <string>Open ^KR</string>
+   </property>
+  </action>
+  <action name="action_Close">
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save ^KS</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save &amp;As...</string>
+   </property>
+   <property name="statusTip">
+    <string>Save As ^KT</string>
+   </property>
+  </action>
+  <action name="actionSave_and_Close">
+   <property name="text">
+    <string>Save and Close</string>
+   </property>
+   <property name="statusTip">
+    <string>Save and Close ^KD</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print...</string>
+   </property>
+   <property name="statusTip">
+    <string>Print ^KP</string>
+   </property>
+  </action>
+  <action name="actionPrint_Preview">
+   <property name="text">
+    <string>Print Preview...</string>
+   </property>
+   <property name="statusTip">
+    <string>Print Preview ^OP</string>
+   </property>
+  </action>
+  <action name="actionStatus">
+   <property name="text">
+    <string>Status</string>
+   </property>
+   <property name="statusTip">
+    <string>Status ^O?</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="statusTip">
+    <string>Exit ^KX</string>
+   </property>
+  </action>
+  <action name="actionMark_Block_Begining">
+   <property name="text">
+    <string>Mark Block Begining</string>
+   </property>
+  </action>
+  <action name="actionMark_Block_End">
+   <property name="text">
+    <string>Mark Block End</string>
+   </property>
+  </action>
+  <action name="actionMove">
+   <property name="text">
+    <string>Move Block</string>
+   </property>
+  </action>
+  <action name="actionBlock">
+   <property name="text">
+    <string>Block</string>
+   </property>
+  </action>
+  <action name="actionFrom_Clipboard">
+   <property name="text">
+    <string>From Clipboard</string>
+   </property>
+  </action>
+  <action name="actionTo_Clipboard">
+   <property name="text">
+    <string>To Clipboard</string>
+   </property>
+  </action>
+  <action name="actionBlock_2">
+   <property name="text">
+    <string>Block</string>
+   </property>
+  </action>
+  <action name="actionWord">
+   <property name="text">
+    <string>Word</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="text">
+    <string>Line</string>
+   </property>
+  </action>
+  <action name="actionLine_Left_of_Cursor">
+   <property name="text">
+    <string>Line Left of Cursor</string>
+   </property>
+  </action>
+  <action name="actionLine_Right_of_Cursor">
+   <property name="text">
+    <string>Line Right of Cursor</string>
+   </property>
+  </action>
+  <action name="actionTo_Character">
+   <property name="text">
+    <string>To Character...</string>
+   </property>
+  </action>
+  <action name="actionMark_Previous_Block">
+   <property name="text">
+    <string>Mark Previous Block</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="text">
+    <string>Find...</string>
+   </property>
+  </action>
+  <action name="actionFind_and_Replace">
+   <property name="text">
+    <string>Find and Replace...</string>
+   </property>
+  </action>
+  <action name="actionFind_Next">
+   <property name="text">
+    <string>Find Next</string>
+   </property>
+  </action>
+  <action name="actionGo_to_Character">
+   <property name="text">
+    <string>Go to Character...</string>
+   </property>
+  </action>
+  <action name="actionGo_to_Page">
+   <property name="text">
+    <string>Go to Page...</string>
+   </property>
+  </action>
+  <action name="action1">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="action2">
+   <property name="text">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="action3">
+   <property name="text">
+    <string>3</string>
+   </property>
+  </action>
+  <action name="action4">
+   <property name="text">
+    <string>4</string>
+   </property>
+  </action>
+  <action name="action5">
+   <property name="text">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="action6">
+   <property name="text">
+    <string>6</string>
+   </property>
+  </action>
+  <action name="action7">
+   <property name="text">
+    <string>7</string>
+   </property>
+  </action>
+  <action name="action8">
+   <property name="text">
+    <string>8</string>
+   </property>
+  </action>
+  <action name="action9">
+   <property name="text">
+    <string>9</string>
+   </property>
+  </action>
+  <action name="action0">
+   <property name="text">
+    <string>0</string>
+   </property>
+  </action>
+  <action name="action1_2">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="action2_2">
+   <property name="text">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="action3_2">
+   <property name="text">
+    <string>3</string>
+   </property>
+  </action>
+  <action name="action4_2">
+   <property name="text">
+    <string>4</string>
+   </property>
+  </action>
+  <action name="action5_2">
+   <property name="text">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="action6_2">
+   <property name="text">
+    <string>6</string>
+   </property>
+  </action>
+  <action name="action7_2">
+   <property name="text">
+    <string>7</string>
+   </property>
+  </action>
+  <action name="action8_2">
+   <property name="text">
+    <string>8</string>
+   </property>
+  </action>
+  <action name="action9_2">
+   <property name="text">
+    <string>9</string>
+   </property>
+  </action>
+  <action name="action0_2">
+   <property name="text">
+    <string>0</string>
+   </property>
+  </action>
+  <action name="actionEdit_Note">
+   <property name="text">
+    <string>Edit Note</string>
+   </property>
+  </action>
+  <action name="actionPrint_Preview_2">
+   <property name="text">
+    <string>Print Preview</string>
+   </property>
+  </action>
+  <action name="actionCommand_Tages">
+   <property name="text">
+    <string>Command Tages</string>
+   </property>
+  </action>
+  <action name="actionBlock_Highlighting">
+   <property name="text">
+    <string>Block Highlighting</string>
+   </property>
+  </action>
+  <action name="actionScreen_Settings">
+   <property name="text">
+    <string>Screen Settings...</string>
+   </property>
+  </action>
+  <action name="actionPage_Break">
+   <property name="text">
+    <string>Page Break</string>
+   </property>
+  </action>
+  <action name="actionColumn_Break">
+   <property name="text">
+    <string>Column Break</string>
+   </property>
+  </action>
+  <action name="actionToday_s_Date">
+   <property name="text">
+    <string>Today's Date</string>
+   </property>
+  </action>
+  <action name="actionCurrent_Time">
+   <property name="text">
+    <string>Current Time</string>
+   </property>
+  </action>
+  <action name="actionLast_Math_Result">
+   <property name="text">
+    <string>Last Math Result</string>
+   </property>
+  </action>
+  <action name="actionLast_Math_Expression">
+   <property name="text">
+    <string>Last Math Expression</string>
+   </property>
+  </action>
+  <action name="actionLast_Math_as_Dollar">
+   <property name="text">
+    <string>Last Math as Dollar</string>
+   </property>
+  </action>
+  <action name="actionCurrent_Filename">
+   <property name="text">
+    <string>Current Filename</string>
+   </property>
+  </action>
+  <action name="actionCurrent_Drive">
+   <property name="text">
+    <string>Current Drive</string>
+   </property>
+  </action>
+  <action name="actionCurrent_Directory">
+   <property name="text">
+    <string>Current Directory</string>
+   </property>
+  </action>
+  <action name="actionCurrent_Path">
+   <property name="text">
+    <string>Current Path</string>
+   </property>
+  </action>
+  <action name="actionDate">
+   <property name="text">
+    <string>Date</string>
+   </property>
+  </action>
+  <action name="actionTime">
+   <property name="text">
+    <string>Time</string>
+   </property>
+  </action>
+  <action name="actionPage">
+   <property name="text">
+    <string>Page</string>
+   </property>
+  </action>
+  <action name="actionLine_2">
+   <property name="text">
+    <string>Line</string>
+   </property>
+  </action>
+  <action name="actionFilename">
+   <property name="text">
+    <string>Filename</string>
+   </property>
+  </action>
+  <action name="actionDrive">
+   <property name="text">
+    <string>Drive</string>
+   </property>
+  </action>
+  <action name="actionDirectory">
+   <property name="text">
+    <string>Directory</string>
+   </property>
+  </action>
+  <action name="actionPath">
+   <property name="text">
+    <string>Path</string>
+   </property>
+  </action>
+  <action name="actionExtended_Character">
+   <property name="text">
+    <string>Extended Character</string>
+   </property>
+  </action>
+  <action name="actionFile">
+   <property name="text">
+    <string>File...</string>
+   </property>
+  </action>
+  <action name="actionGraphic">
+   <property name="text">
+    <string>Graphic...</string>
+   </property>
+  </action>
+  <action name="actionParagraph_Outline_Number">
+   <property name="text">
+    <string>Paragraph Outline Number...</string>
+   </property>
+  </action>
+  <action name="actionComment">
+   <property name="text">
+    <string>Comment...</string>
+   </property>
+  </action>
+  <action name="actionFootnote">
+   <property name="text">
+    <string>Footnote...</string>
+   </property>
+  </action>
+  <action name="actionEndnote">
+   <property name="text">
+    <string>Endnote...</string>
+   </property>
+  </action>
+  <action name="actionAnnotation">
+   <property name="text">
+    <string>Annotation...</string>
+   </property>
+  </action>
+  <action name="actionTOC_Entry">
+   <property name="text">
+    <string>TOC Entry...</string>
+   </property>
+  </action>
+  <action name="actionIndex_Entry">
+   <property name="text">
+    <string>Index Entry...</string>
+   </property>
+  </action>
+  <action name="actionMark_Text_for_Index">
+   <property name="text">
+    <string>Mark Text for Index</string>
+   </property>
+  </action>
+  <action name="actionDot_Leader_to_Tab">
+   <property name="text">
+    <string>Dot Leader to Tab</string>
+   </property>
+  </action>
+  <action name="actionFont_Tag">
+   <property name="text">
+    <string>Font Tag</string>
+   </property>
+  </action>
+  <action name="actionStyle_Tag">
+   <property name="text">
+    <string>Style Tag</string>
+   </property>
+  </action>
+  <action name="actionNote_2">
+   <property name="text">
+    <string>Note...</string>
+   </property>
+  </action>
+  <action name="actionPrevious_Position">
+   <property name="text">
+    <string>Previous Position</string>
+   </property>
+  </action>
+  <action name="actionLast_Find_Replace">
+   <property name="text">
+    <string>Last Find/Replace</string>
+   </property>
+  </action>
+  <action name="actionBeginning_of_Block">
+   <property name="text">
+    <string>Beginning of Block</string>
+   </property>
+  </action>
+  <action name="actionDocument_Beginning">
+   <property name="text">
+    <string>Document Beginning</string>
+   </property>
+  </action>
+  <action name="actionDocument_End">
+   <property name="text">
+    <string>Document End</string>
+   </property>
+  </action>
+  <action name="actionScrol_Continuously_Up">
+   <property name="text">
+    <string>Scroll Continuously Up</string>
+   </property>
+  </action>
+  <action name="actionScroll_Continuously_Down">
+   <property name="text">
+    <string>Scroll Continuously Down</string>
+   </property>
+  </action>
+  <action name="actionStarting_Number_for_Note">
+   <property name="text">
+    <string>Starting Number for Note...</string>
+   </property>
+  </action>
+  <action name="actionConvert_Note">
+   <property name="text">
+    <string>Convert Note...</string>
+   </property>
+  </action>
+  <action name="actionConvert_at_Print">
+   <property name="text">
+    <string>Convert at Print...</string>
+   </property>
+  </action>
+  <action name="actionEndnote_Location">
+   <property name="text">
+    <string>Endnote Location</string>
+   </property>
+  </action>
+  <action name="actionColumn_Block_Mode">
+   <property name="text">
+    <string>Column Block Mode</string>
+   </property>
+  </action>
+  <action name="actionColumn_Replace_Mode">
+   <property name="text">
+    <string>Column Replace Mode</string>
+   </property>
+  </action>
+  <action name="actionAuto_Aline">
+   <property name="text">
+    <string>Auto Align</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionItalic">
+   <property name="text">
+    <string>Italic</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="text">
+    <string>Underline</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="text">
+    <string>Font...</string>
+   </property>
+  </action>
+  <action name="actionStrikeout">
+   <property name="text">
+    <string>Strikeout</string>
+   </property>
+  </action>
+  <action name="actionSubscript">
+   <property name="text">
+    <string>Subscript</string>
+   </property>
+  </action>
+  <action name="actionSuperscript">
+   <property name="text">
+    <string>Superscript</string>
+   </property>
+  </action>
+  <action name="actionDouble_Strike">
+   <property name="text">
+    <string>Double Strike</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="actionSelect_Paragraph_Style">
+   <property name="text">
+    <string>Select Paragraph Style</string>
+   </property>
+  </action>
+  <action name="actionReturn_to_Previous_Style">
+   <property name="text">
+    <string>Return to Previous Style</string>
+   </property>
+  </action>
+  <action name="actionDefine_Paragraph_Style">
+   <property name="text">
+    <string>Define Paragraph Style...</string>
+   </property>
+  </action>
+  <action name="actionCopy_Style_to_Library">
+   <property name="text">
+    <string>Copy Style to Library...</string>
+   </property>
+  </action>
+  <action name="actionDelete_Library_Style">
+   <property name="text">
+    <string>Delete Library Style...</string>
+   </property>
+  </action>
+  <action name="actionRename_Library_Style">
+   <property name="text">
+    <string>Rename Library Style...</string>
+   </property>
+  </action>
+  <action name="actionRename_DOcument_Style">
+   <property name="text">
+    <string>Rename DOcument Style...</string>
+   </property>
+  </action>
+  <action name="actionUppercase">
+   <property name="text">
+    <string>Uppercase</string>
+   </property>
+  </action>
+  <action name="actionLowercase">
+   <property name="text">
+    <string>Lowercase</string>
+   </property>
+  </action>
+  <action name="actionSentence_Case">
+   <property name="text">
+    <string>Sentence Case</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+  </action>
+  <action name="actionCenter_Line">
+   <property name="text">
+    <string>Center Line</string>
+   </property>
+  </action>
+  <action name="actionRight_Align_Line">
+   <property name="text">
+    <string>Right Align Line</string>
+   </property>
+  </action>
+  <action name="actionRuler_Line">
+   <property name="text">
+    <string>Ruler Line...</string>
+   </property>
+  </action>
+  <action name="actionColumns">
+   <property name="text">
+    <string>Columns...</string>
+   </property>
+  </action>
+  <action name="actionPage_2">
+   <property name="text">
+    <string>Page...</string>
+   </property>
+  </action>
+  <action name="actionHeader">
+   <property name="text">
+    <string>Header...</string>
+   </property>
+  </action>
+  <action name="actionFooter">
+   <property name="text">
+    <string>Footer...</string>
+   </property>
+  </action>
+  <action name="actionPage_Numbering">
+   <property name="text">
+    <string>Page Numbering...</string>
+   </property>
+  </action>
+  <action name="actionLine_Numbering">
+   <property name="text">
+    <string>Line Numbering...</string>
+   </property>
+  </action>
+  <action name="actionAlignment_and_Spacing">
+   <property name="text">
+    <string>Alignment and Spacing...</string>
+   </property>
+  </action>
+  <action name="actionKeep_Words_Together_on_Line">
+   <property name="text">
+    <string>Keep Words Together on Line</string>
+   </property>
+  </action>
+  <action name="actionKeep_Lines_Together_on_Page">
+   <property name="text">
+    <string>Keep Lines Together on Page...</string>
+   </property>
+  </action>
+  <action name="actionKeep_Lines_Toghether_in_COlumn">
+   <property name="text">
+    <string>Keep Lines Toghether in Column...</string>
+   </property>
+  </action>
+  <action name="actionSpell_Check_Global">
+   <property name="text">
+    <string>Spell Check Global</string>
+   </property>
+  </action>
+  <action name="actionRest_of_Document">
+   <property name="text">
+    <string>Rest of Document</string>
+   </property>
+  </action>
+  <action name="actionParagraph">
+   <property name="text">
+    <string>Paragraph</string>
+   </property>
+  </action>
+  <action name="actionRest_of_Notes">
+   <property name="text">
+    <string>Rest of Notes</string>
+   </property>
+  </action>
+  <action name="actionThesaurus">
+   <property name="text">
+    <string>Thesaurus...</string>
+   </property>
+  </action>
+  <action name="actionLanguage_Change">
+   <property name="text">
+    <string>Language Change...</string>
+   </property>
+  </action>
+  <action name="actionInset">
+   <property name="text">
+    <string>Inset</string>
+   </property>
+  </action>
+  <action name="actionCalculator">
+   <property name="text">
+    <string>Calculator</string>
+   </property>
+  </action>
+  <action name="actionBlock_Math">
+   <property name="text">
+    <string>Block Math</string>
+   </property>
+  </action>
+  <action name="actionWord_Count">
+   <property name="text">
+    <string>Word Count</string>
+   </property>
+  </action>
+  <action name="actionAscending">
+   <property name="text">
+    <string>Ascending</string>
+   </property>
+  </action>
+  <action name="actionDescending">
+   <property name="text">
+    <string>Descending</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="text">
+    <string>Play...</string>
+   </property>
+  </action>
+  <action name="actionRecord">
+   <property name="text">
+    <string>Record...</string>
+   </property>
+  </action>
+  <action name="actionEdit_Create">
+   <property name="text">
+    <string>Edit/Create...</string>
+   </property>
+  </action>
+  <action name="actionSingle_Step">
+   <property name="text">
+    <string>Single Step...</string>
+   </property>
+  </action>
+  <action name="actionCopy_2">
+   <property name="text">
+    <string>Copy...</string>
+   </property>
+  </action>
+  <action name="actionDelete_2">
+   <property name="text">
+    <string>Delete...</string>
+   </property>
+  </action>
+  <action name="actionRename">
+   <property name="text">
+    <string>Rename...</string>
+   </property>
+  </action>
+  <action name="actionData_File">
+   <property name="text">
+    <string>Data File...</string>
+   </property>
+  </action>
+  <action name="actionName_Variables">
+   <property name="text">
+    <string>Name Variables...</string>
+   </property>
+  </action>
+  <action name="actionSet_Variable">
+   <property name="text">
+    <string>Set Variable...</string>
+   </property>
+  </action>
+  <action name="actionSet_Variable_to_Math_Result">
+   <property name="text">
+    <string>Set Variable to Math Result...</string>
+   </property>
+  </action>
+  <action name="actionAsk_for_Variable">
+   <property name="text">
+    <string>Ask for Variable...</string>
+   </property>
+  </action>
+  <action name="actionIf">
+   <property name="text">
+    <string>If...</string>
+   </property>
+  </action>
+  <action name="actionElse">
+   <property name="text">
+    <string>Else</string>
+   </property>
+  </action>
+  <action name="actionEnd_If">
+   <property name="text">
+    <string>End If</string>
+   </property>
+  </action>
+  <action name="actionGo_to_Top_of_Document">
+   <property name="text">
+    <string>Go to Top of Document</string>
+   </property>
+  </action>
+  <action name="actionGo_to_End_of_Document">
+   <property name="text">
+    <string>Go to End of Document</string>
+   </property>
+  </action>
+  <action name="actionDisplay_Message">
+   <property name="text">
+    <string>Display Message...</string>
+   </property>
+  </action>
+  <action name="actionPrint_File_n_Times">
+   <property name="text">
+    <string>Print File n Times...</string>
+   </property>
+  </action>
+  <action name="actionRest_of_Document_2">
+   <property name="text">
+    <string>Rest of Document</string>
+   </property>
+  </action>
+  <action name="actionWord_2">
+   <property name="text">
+    <string>Word</string>
+   </property>
+  </action>
+  <action name="actionType_Word">
+   <property name="text">
+    <string>Type Word...</string>
+   </property>
+  </action>
+  <action name="actionRest_of_Notes_2">
+   <property name="text">
+    <string>Rest of Notes</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

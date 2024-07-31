@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=WordTsar
+GenericName=Word Processor
+Exec=WordTsar %f
+Icon=wordtsar
+Comment=WordTsar - Wordstar Clone
+Categories=Office;WordProcessor;

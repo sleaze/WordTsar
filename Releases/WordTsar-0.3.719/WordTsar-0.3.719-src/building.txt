@@ -1,0 +1,74 @@
+Building WordTsar
+-----------------
+
+There is no build system like cmake or premake in place. I have a preliminary premake.lua file 
+that will generate projects for me, but it is old and out of date.
+
+Linux
+-----
+
+Install CodeLite and load the WordTsar.workspace file.
+
+The codelite workspace assumes you have wxWidgets installed in ~/Downloads/wxWidgets/wxWidgets 
+and there are two build directories: 
+
+~/Downloads/wxWidgets/wxWidgets/build-release  and
+~/Downloads/wxWidgets/wxWidgets/build-release-gtk3
+
+The config line for the gtk2 build of wxWidgets is:
+
+export CXXFLAGS="-ffunction-sections -fdata-sections -Os"
+export LDFLAGS="-Wl,--gc-sections"
+../configure --disable-debug --disable-debug_flag --disable-debug_info --disable-shared --enable-svg --enable-aui --with-gtk=2 --enable-graphics_ctx  --enable-utf8 --disable-compat28 --with-gtkprint --enable-stl --enable-unicode
+
+
+The config line for the gtk3 build of wxWidgets is:
+
+../configure --disable-debug --disable-debug_flag --disable-shared --enable-svg --enable-aui --with-gtk=3 --enable-graphics_ctx --enable-stl --enable-utf8 --disable-compat28 --with-gtkprint
+
+
+I compile with wxWidgets trunk, though I believe any 3.x release will do as well.
+
+
+If anyone wants to submit a build system that will generate Linux (CodeLite), Windows (Visual Studio), 
+and OSX (XCode) projects, I'm open. Since my build system is hand-made, only the gtk2 release build of
+WordTsar will increment the build number. This has been a one man project for quite some time, and 
+it builds like it.
+
+
+Windows
+-------
+
+
+Install Visual Studio 17 and load the WordTsar.sln solution.
+
+The VS solution assumes you have wxWidgets install in c:\User\Gerald Brandt\Downloads\wxWidgets, which 
+is almost definitely wrong for you. Change it to where you have wxWidgets installed and built.
+
+When compiling wxWidgets, make sure you have the STL compatibly flags all turned on, these would be:
+
+#define wxUSE_STL 1
+#define wxUSE_STD_DEFAULT  0
+#define wxUSE_STD_CONTAINERS_COMPATIBLY 1
+#define wxUSE_STD_CONTAINERS 1
+#define wxUSE_STD_IOSTREAM 1
+#define wxUSE_STD_STRING 1
+#define wxUSE_STD_STRING_CONV_IN_WXSTRING wxUSE_STL
+  
+Otherwise you'll get some funky errors when compiling WordTsar.
+
+I compile with wxWidgets trunk, though I believe any 3.x release will do as well.
+
+
+If anyone wants to submit a build system that will generate Linux (CodeLite), Windows (Visual Studio), 
+and OSX (XCode) projects, I'm open. Since my build system is hand-made, only the gtk2 release build of
+WordTsar will increment the build number. This has been a one man project for quite some time, and 
+it builds like it.
+
+
+
+OSX
+---
+
+
+Instructions and project files coming
